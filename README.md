@@ -90,15 +90,17 @@ In addition to the entry file, there will be three scripts involved in this proj
 
 
 
-Day 1:  Create little red riding hood character and class logic
+Day 1:  Create little red riding hood character and class logic.
 
-Day 2: Create Wolf character and class logic
+Day 2: Create Wolf character and class logic as well as board set up.
 
-Day:3 Create board set up and paths
+Day:3 Create logic for controlling characters and game controls.
 
-Day:4 Create logic for controlling characters and game controls
 
-Day:5 bring everything together and make sure it works right
+Day:4 Create collision detection logic and insure it works correctly.
+
+
+Day:5 Bring everything together and makes sure functionality is sound.
 
 
 
