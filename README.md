@@ -1,3 +1,5 @@
+WIREFRAME KEEPS DISAPPEARING SORRY!
+
 Background
 
 
@@ -39,11 +41,33 @@ Wireframes
 This app will be a single screen app with a game board  and game controls.  The app  will include nav links to my Github, my LinkedIn, and the about modal. 
  The game controls will include start, stop and reset buttons.  A user will be able to use the arrow keys to move along the path to grandma’s.  
 
-
+  
+  
+  
+  
+  
+    
+    
+  
+  
   
  
  
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Architecture and Technologies
