@@ -43,7 +43,8 @@ This app will be a single screen app with a game board  and game controls.  The 
 
   
   
-  
+  ![Homepage 3](https://user-images.githubusercontent.com/67871528/101362066-a245b480-386d-11eb-94c1-67985d32824e.png)
+
   
   
     
