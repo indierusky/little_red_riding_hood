@@ -2,7 +2,7 @@
 
 margin: 0;
 padding: 0;
-/* box-sizing: border-box; */
+box-sizing: border-box;
 
 }
 /* 
@@ -27,10 +27,10 @@ height: 100%;
 
 } */
 
-.wrapper{
+/* .wrapper{
 position: absolute;
-width: 800px;
-height: 800px;
+width: 100%;
+height: 100%;
  top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
@@ -38,16 +38,36 @@ border: 5px solid black;
 
 
 
-}
+
+} */
 
 /* .scene, */
+
+.topimg{
+
+width: 100%;
+height: 100%;
+
+}
+
+/* 
+body{
+
+background-image: url('../public/lilredhood.jpg');
+
+
+} */
+
+
 canvas {
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
+    transform: translate(-50%, -50%);
+    border: 5px solid black;
     /* border: 1px solid black; */
     /* background: #d79c50; */
     /* transform: translate(-50%, -50%); */

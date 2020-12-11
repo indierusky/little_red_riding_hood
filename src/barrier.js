@@ -1,5 +1,6 @@
 class Barrier {
-constructor(x, y, width, height, speed, type){
+
+constructor(ctx, x, y, width, height, speed, gameSpeed,img,type){
 
 this.x = x;
 this.y = y;
@@ -7,22 +8,53 @@ this.width = width;
 this.height = height;
 this.speed = speed;
 this.type = type;
-
+this.frameX = 0;
+this.frameY = 0;
+this.ctx = ctx;
+this.gameSpeed = gameSpeed;
+this.image = img;
 }
 
 
 draw(){
 
-ctx1.fillStyle = "red";
-ctx1.fillRect(this.x, this.y, this.width, this.height)
+
+
+if(this.type === 'wolf'){
+this.frameY = 1;
+// this.frameX =3;
+if (this.frameX > 2) this.frameX = 0;
+else this.frameX++;
+this.ctx.drawImage(this.image,this.frameX*288.5, this.frameY*100, 47,48, this.x, this.y, this.width, this.height)
+
+
+
+if(this.type === 'wolfl'){
+this.ctx.drawImage(this.image,288, 250, 47,50, this.x + 200, this.y +100, this.width, this.height)
+
+}
+
+
+
+
+if(this.type === 'bee'){
+ 
+if (this.frameX > 5) this.frameX = 0;
+else this.frameX++;
+this.ctx.drawImage(this.image,this.frameX, this.frameY, 71,71, this.x + 200, this.y +100, this.width, this.height)
+
+}
+}
+// ctx1.fillStyle = "red";
+// ctx1.fillRect(this.x, this.y, this.width, this.height)
 
 }
 
 update(){
 
-    this.x += this.speed * gameSpeed;
+    this.x += this.speed * this.gameSpeed;
 
-    if(this.x > canvas1.width * this.width){
+    if(this.x > canvas.width * this.width){
 
             this.x = 0 - this.width;
 
@@ -40,73 +72,10 @@ update(){
 }
 
 
-function initBarriers(){
-
-for(let i = 0; i < 2; i++){
-
-let x = i * 350;
-
-wolvesArray.push( new Barrier(x, canvas1.height-unit *2 - 20, unit, unit, 1, 'wolf'))
 
 
-}
-
-for(let i = 0; i < 2; i++){
-
-let x = i * 300;
-
-wolvesArray.push( new Barrier(x, canvas1.height-unit *3 - 20, unit *2, unit, -2, 'wolf'))
 
 
-}
-
-for(let i = 0; i < 2; i++){
-
-let x = i * 350;
-
-wolvesArray.push( new Barrier(x, canvas1.height-unit *4 - 20, unit, unit, 2, 'wolf'))
 
 
-}
-
-for(let i = 0; i < 2; i++){
-
-let x = i * 400;
-
-barriersArray.push( new Barrier(x, canvas1.height-unit *5 - 20, unit * 2, unit, -2, 'tree'))
-
-
-}
-
-for(let i = 0; i < 3; i++){
-
-let x = i * 200;
-
-barriersArray.push( new Barrier(x, canvas1.height-unit *6 - 20, unit * 2, unit, 1, 'tree'))
-
-
-}
-
-
-}
-
-initBarriers();
-
-
-function handleBarriers() {
-
-for(let i=0; i < wolvesArray.length; i++){
-
-        wolvesArray[i].update();
-        wolvesArray[i].draw();
-
-}
-
-for(let i=0; i < barriersArray.length; i++){
-
-        barriersArray[i].update();
-        barriersArray[i].draw();
-
-}
-
-}
+export default Barrier;
