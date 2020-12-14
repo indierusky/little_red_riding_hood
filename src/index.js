@@ -14,6 +14,7 @@ let collissions  = 0;
 let frame = 0;
 let gameSpeed = 1;
 
+//made image changes
 let wolvesArray  = [];
 let particlesArray = [];
 let barriersArray = [];
@@ -22,6 +23,8 @@ const maxWolves = 5;
 const maxLives = 5;
 const  keys = [];
 const mode = 0;
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
