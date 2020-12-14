@@ -10,7 +10,6 @@ this.frameY = 3;
 this.x = canvas.width/2 - this.width/2;
 this.y = (canvas.height - this.height - 40) + 50;
 this.speed = (Math.random() * 1.5) + 3.5;
-// this.action = characterActions[Math.floor(Math.random() * characterActions.length)];
 this.moving = false;
 this.image = img;
 this.ctx = ctx;

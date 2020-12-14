@@ -45,8 +45,7 @@ this.ctx.drawImage(this.image,this.frameX, this.frameY, 71,71, this.x + 200, thi
 
 }
 }
-// ctx1.fillStyle = "red";
-// ctx1.fillRect(this.x, this.y, this.width, this.height)
+
 
 }
 

@@ -1,8 +1,6 @@
-
 import Character from './character';
 import Particle from './particle';
 import Barrier from './barrier';
-// import {resetGame, collide, scoreBoard} from './score';
 
 
 
