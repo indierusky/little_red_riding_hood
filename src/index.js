@@ -1,8 +1,11 @@
 import Character from './character';
 import Particle from './particle';
 import Barrier from './barrier';
-
-
+import rider from '../public/rider.png';
+import back from '../public/grandma3.jpg';
+import collide from '../public/collide.png';
+import wolf from '../public/wolves.png';
+import bee from '../public/bees.png';
 
 
 const unit = 80;
@@ -51,32 +54,34 @@ ctx1.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH );
 const images = {};
 
 images.player = new Image();
-images.player.src = '../public/rider.png';
+images.player.src = buildAssetPath(rider);
 
-const background = new Image();
-background.src = '../public/grandma3.jpg';
+images.back = new Image();
+images.back.src = buildAssetPath(back);
 
-const collided = new Image();
-collided.src = '../public/collide.png';
+images.collide = new Image();
+images.collide.src = buildAssetPath(collide);
 
-const wolfimg = new Image();
-wolfimg.src = '../public/wolves.png';
-
-
-
-const beeimg = new Image();
-beeimg.src = '../public/bees.png';
+images.wolf = new Image();
+images.wolf.src = buildAssetPath(wolf);
 
 
 
+images.bee = new Image();
+images.bee.src = buildAssetPath(bee);
+
+
+function buildAssetPath(imgSrc) {
+  return `./dist/${imgSrc}`;
+}
 
 
 
-images.player.onload = function (){
+ images.collide.onload = function (){
    
 let ridingHood = new Character(ctx1,images.player, keys, score, gameSpeed)
 
-wolfimg.onload = function() {
+// wolfimg.onload = function() {
 
 
 
@@ -86,7 +91,7 @@ for(let i = 0; i < 2; i++){
 
 let x = i * 350;
 
-wolvesArray.push( new Barrier(ctx1, x, canvas1.height-unit *2 - 20, unit, unit, 1, gameSpeed,wolfimg, 'wolf'))
+wolvesArray.push( new Barrier(ctx1, x, canvas1.height-unit *2 - 20, unit, unit, 1, gameSpeed,images.wolf, 'wolf'))
 
 
 }
@@ -95,7 +100,7 @@ for(let i = 0; i < 2; i++){
 
 let x = i * 300;
 
-wolvesArray.push( new Barrier(ctx1, x, canvas1.height-unit *3 - 20, unit *2, unit, -2, gameSpeed,wolfimg,'wolfl'))
+wolvesArray.push( new Barrier(ctx1, x, canvas1.height-unit *3 - 20, unit *2, unit, -2, gameSpeed,images.wolf,'wolfl'))
 
 
 }
@@ -104,7 +109,7 @@ for(let i = 0; i < 2; i++){
 
 let x = i * 350;
 
-wolvesArray.push( new Barrier(ctx1, x, canvas1.height-unit *4 - 20, unit, unit, 2, gameSpeed,wolfimg, 'wolf'))
+wolvesArray.push( new Barrier(ctx1, x, canvas1.height-unit *4 - 20, unit, unit, 2, gameSpeed,images.wolf, 'wolf'))
 
 
 }
@@ -113,21 +118,21 @@ for(let i = 0; i < 2; i++){
 
 let x = i * 400;
 
-barriersArray.push( new Barrier(ctx1, x, canvas1.height-unit *5 - 20, unit * 2, unit, -2, gameSpeed,beeimg, 'bee'))
+barriersArray.push( new Barrier(ctx1, x, canvas1.height-unit *5 - 20, unit * 2, unit, -2, gameSpeed,images.bee, 'bee'))
 
 
 }
 
 
-beeimg.onload = function() {
+// beeimg.onload = function() {
 
 for(let i = 0; i < 3; i++){
 
 let x = i * 200;
 
-barriersArray.push( new Barrier(ctx1, x, canvas1.height-unit *6 - 20, unit * 2, unit, 1,gameSpeed,beeimg, 'bee'))
+barriersArray.push( new Barrier(ctx1, x, canvas1.height-unit *6 - 20, unit * 2, unit, 1,gameSpeed,images.bee, 'bee'))
 }
-}
+// }
 
 
 
@@ -157,7 +162,7 @@ for(let i =0; i < wolvesArray.length; i++){
 
         if(collide(ridingHood, wolvesArray[i])){
 
-                drawSprite(collided, 0, 0, 81, 80, ridingHood.x, ridingHood.y, ridingHood.width, ridingHood.height )
+                drawSprite(images.collide, 0, 0, 81, 80, ridingHood.x, ridingHood.y, ridingHood.width, ridingHood.height )
                 resetGame();
         }
 
@@ -168,7 +173,7 @@ for(let i =0; i < barriersArray.length; i++){
 
 if(collide(ridingHood, barriersArray[i])){
 
-                drawSprite(collided, 0, 0, 81, 80, ridingHood.x, ridingHood.y, ridingHood.width, ridingHood.height )
+                drawSprite(images.collide, 0, 0, 81, 80, ridingHood.x, ridingHood.y, ridingHood.width, ridingHood.height )
                 resetGame();
         }
 }
@@ -279,8 +284,8 @@ return !(first.x > second.x + second.width ||
 
 function resetGame(){
 
-ridingHood.x = canvas.width/2 - ridingHood.width/2;
-ridingHood.y = canvas.height - ridingHood.height-40;
+ridingHood.x = canvas1.width/2 - ridingHood.width/2;
+ridingHood.y = canvas1.height - ridingHood.height-40;
 score = 0;
 collissions++ 
 gameSpeed = 1;
@@ -315,9 +320,9 @@ elapsed = now - then;
 if (elapsed > fpsInterval){
 
   then = now - (elapsed % fpsInterval)
-  ctx1.clearRect(0, 0, canvas.width, canvas1.height);
+  ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
   
-  ctx1.drawImage(background, 100, 100, canvas1.width, canvas1.height);
+  ctx1.drawImage(images.back, 100, 100, canvas1.width, canvas1.height);
     handleParticles();
     ridingHood.drawSprite();
 
@@ -331,7 +336,7 @@ if (elapsed > fpsInterval){
 
 
 
-}
+// }
 
 
 
