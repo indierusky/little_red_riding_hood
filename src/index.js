@@ -20,7 +20,6 @@ const maxLives = 5;
 const  keys = [];
 const mode = 0;
 
-setTimeout(  function() { }, 5000);
 
 document.addEventListener('DOMContentLoaded', () => {
     
