@@ -73,6 +73,12 @@ this.ctx.drawImage(this.image, this.frameX*this.width, this.frameY*this.height, 
 
 
   }
+   if(this.y < 450  && this.x > 1400){
+     
+      this.score++;
+      this.gameSpeed += .5;
+   }
+
 
 }
 
