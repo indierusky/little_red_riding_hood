@@ -6,7 +6,7 @@ import back from '../public/grandma3.jpg';
 import collide from '../public/collide.png';
 import wolf from '../public/wolves.png';
 import bee from '../public/bees.png';
-
+import topimg from '../public/lilredhood.jpg';
 
 const unit = 80;
 let score = 0;
@@ -55,6 +55,8 @@ ctx1.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH );
 
 
 const images = {};
+
+topimg.src = buildAssetPath(topimg);
 
 images.player = new Image();
 images.player.src = buildAssetPath(rider);
@@ -145,7 +147,9 @@ barriersArray.push( new Barrier(ctx1, x, canvas1.height-unit *6 - 20, unit * 2, 
 initBarriers();
 
 
+
 function handleBarriers(){
+
 
 for(let i=0; i < wolvesArray.length; i++){
 
@@ -218,9 +222,9 @@ function scores(){
 
 score++;
 gameSpeed += 0.5;
-ridingHood.x = canvas.width/2 - this.width/2;
-ridingHood.y = canvas.height - this.height-40;
-
+ridingHood.x = canvas1.width/2 - ridingHood.width/2;
+ridingHood.y = canvas1.height - ridingHood.height-40;
+initBarriers();
 }
 
 
@@ -229,6 +233,7 @@ window.addEventListener("keydown", function(e){
   keys[e.code] = true;
   if(e.code === 'Enter') startAnimating(20);
   ridingHood.moving = true;
+ if(ridingHood.y < 450  && ridingHood.x > 1400) scores();
 
   
 });
@@ -243,6 +248,8 @@ ridingHood.moving = false;
 
 });
 
+window.ridingHood = ridingHood;
+
 
 
 // window.onload = setInterval(animate, 1000/30);
@@ -255,7 +262,6 @@ canvas1.width = window.innerWidth;
 
 })
 
- if(ridingHood.y < 450  && ridingHood.x > 1400) scores();
 
 
 

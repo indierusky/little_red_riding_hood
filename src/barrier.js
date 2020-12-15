@@ -30,7 +30,11 @@ this.ctx.drawImage(this.image,this.frameX*288.5, this.frameY*100, 47,48, this.x,
 
 
 if(this.type === 'wolfl'){
-this.ctx.drawImage(this.image,288, 250, 47,50, this.x + 200, this.y +100, this.width, this.height)
+this.frameY = 5;
+this.frameX =3;
+if (this.frameX > 2) this.frameX = 0;
+else this.frameX++;
+this.ctx.drawImage(this.image,this.frameX * 288, this.frameY* 250, 47,50, this.x + 200, this.y +100, this.width, this.height)
 
 }
 
