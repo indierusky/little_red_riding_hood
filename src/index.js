@@ -56,7 +56,9 @@ ctx1.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH );
 
 const images = {};
 
-topimg.src = buildAssetPath(topimg);
+images.topimg = new Image();
+
+images.topimg.src = buildAssetPath(topimg);
 
 images.player = new Image();
 images.player.src = buildAssetPath(rider);
