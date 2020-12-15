@@ -56,9 +56,14 @@ ctx1.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH );
 
 const images = {};
 
-images.topimg = new Image();
+// const topimg = document.createElement("img");
 
-images.topimg.src = buildAssetPath(topimg);
+// topimg.src = buildAssetPath(topimg);
+// topimg.classList.add("top");
+const disp = document.createElement("div");
+disp.classList.add("disp", "top", "top-img");
+document.body.append(disp);
+// document.body.appendChild(topimg);
 
 images.player = new Image();
 images.player.src = buildAssetPath(rider);
@@ -308,7 +313,7 @@ let fps, fpsInterval, startTime, now, then, elapsed;
 
 function startAnimating(fps){
 
-document.getElementById("topimg").remove();
+// document.body.remove(disp);
 
 
 fpsInterval = 1000/fps;  

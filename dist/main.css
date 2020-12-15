@@ -1,17 +1,42 @@
-* {
+body {
 
 margin: 0;
 padding: 0;
-box-sizing: border-box;
+/* box-sizing: border-box; */
 
 }
 
-.topimg{
-top: 50%;
-left: 50%;
+.disp{
 
-width: 650px;
+display: flex;
+align-items: left;
+justify-content: left;
+overflow: visible;
+
+
+}
+
+.top{
+top: 0;
+left: 0;
+
+width: 550px;
 height: 550px;
+overflow: visible;
+transform: translate(-5%, -5%);
+
+
+
+
+}
+
+.top-img{
+top: 0;
+left: 0;
+background-image: url("./images/lilredhood.jpg");
+background-size: 100%;
+background-position: center;
+overflow: visible;
 
 
 }
@@ -23,8 +48,8 @@ canvas {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    height: 100%;
+    width: 850px;
+    height: 850px;
     transform: translate(-50%, -50%);
     border: 5px solid black;
     

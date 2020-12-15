@@ -57,11 +57,11 @@ update(){
 
     this.x += this.speed * this.gameSpeed;
 
-    if(this.x > canvas.width * this.width){
+    // if(this.x > canvas1.width * this.width){
 
-            this.x = 0 - this.width;
+    //         this.x = 0 - this.width;
 
-    }
+    // }
 }
 
 
