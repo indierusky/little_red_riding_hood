@@ -19,11 +19,12 @@ overflow: visible;
 .top{
 top: 0;
 left: 0;
+margin-top: 200px;
 
 width: 550px;
-height: 550px;
-overflow: visible;
-transform: translate(-5%, -5%);
+height: 600px;
+overflow: hidden;
+transform: translate(-10%, -10%);
 
 
 

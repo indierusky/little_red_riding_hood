@@ -240,7 +240,7 @@ window.addEventListener("keydown", function(e){
   keys[e.code] = true;
   if(e.code === 'Enter') startAnimating(20);
   ridingHood.moving = true;
- if(ridingHood.y < 450  && ridingHood.x > 1400) scores();
+ if(ridingHood.y <= 520  && ridingHood.x >= 1380) scores();
 
   
 });
@@ -278,9 +278,9 @@ function scoreBoard() {
 ctx1.fillStyle ='black';
 ctx1.strokeStyle ='black';
 ctx1.font = '18px Verdana';
-ctx1.strokeText('Score', 370, 15);
+ctx1.strokeText('Score', 370, 65);
 ctx1.font = '60px Verdana';
-ctx1.fillText(score, 370, 65 )
+ctx1.fillText(score, 370, 110 )
 ctx1.font = '18px Verdana';
 ctx1.strokeText('Lives:' + collissions, 10, 175);
 ctx1.strokeText('Game Speed:' + gameSpeed, 10, 195);
@@ -290,10 +290,10 @@ ctx1.strokeText('Game Speed:' + gameSpeed, 10, 195);
 
 function collide(first, second){
 
-return !(first.x > second.x + second.width || 
-        first.x + first.width < second.x || 
-        first.y > second.y + second.height ||
-        first.y + first.height < second.y);
+return !(first.x > (second.x + second.width) || 
+        (first.x + first.width) < second.x || 
+        first.y > (second.y + second.height) ||
+        (first.y + first.height) < second.y);
 
 
 }
