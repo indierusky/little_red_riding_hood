@@ -1,8 +1,8 @@
 class Particle {
 
 constructor(ctx,x,y){
-this.x = x +90;
-this.y = y +100 ;
+this.x = x + 2;
+this.y = y + 80 ;
 this.radius = Math.random() * 20 + 1;
 this.opacity = .5;
 this.directX = Math.random() * 1 - 0.5;

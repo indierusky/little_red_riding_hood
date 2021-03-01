@@ -1,7 +1,7 @@
 import Character from './character';
 import Particle from './particle';
 import Barrier from './barrier';
-import rider from '../public/rider.png';
+import rider from '../public/newlilr.png';
 import back from '../public/grandma3.jpg';
 import collide from '../public/collide.png';
 import wolf from '../public/wolves.png';
@@ -24,6 +24,8 @@ const maxLives = 5;
 const  keys = [];
 const mode = 0;
 
+window.barriersArray = barriersArray;
+window.wolvesArray = wolvesArray;
 
 
 
@@ -89,7 +91,7 @@ function buildAssetPath(imgSrc) {
 
 
 
- images.collide.onload = function (){
+ images.bee.onload = function (){
    
 let ridingHood = new Character(ctx1,images.player, keys, score, gameSpeed)
 
@@ -103,7 +105,7 @@ for(let i = 0; i < 2; i++){
 
 let x = i * 350;
 
-wolvesArray.push( new Barrier(ctx1, x, canvas1.height-unit *2 - 20, unit, unit, 1, gameSpeed,images.wolf, 'wolf'))
+wolvesArray.push( new Barrier(canvas1, ctx1, x, canvas1.height-unit *2 - 20, unit, unit, 1, gameSpeed,images.wolf, 'wolf'))
 
 
 }
@@ -112,7 +114,7 @@ for(let i = 0; i < 2; i++){
 
 let x = i * 300;
 
-wolvesArray.push( new Barrier(ctx1, x, canvas1.height-unit *3 - 20, unit *2, unit, -2, gameSpeed,images.wolf,'wolfl'))
+wolvesArray.push( new Barrier(canvas1, ctx1, x, canvas1.height-unit *3  - 20, unit *2, unit, -2, gameSpeed,images.wolf,'wolfl'))
 
 
 }
@@ -121,7 +123,7 @@ for(let i = 0; i < 2; i++){
 
 let x = i * 350;
 
-wolvesArray.push( new Barrier(ctx1, x, canvas1.height-unit *4 - 20, unit, unit, 2, gameSpeed,images.wolf, 'wolf'))
+wolvesArray.push( new Barrier(canvas1, ctx1, x, canvas1.height-unit *4 - 20, unit, unit, 2, gameSpeed,images.wolf, 'wolf'))
 
 
 }
@@ -130,7 +132,7 @@ for(let i = 0; i < 2; i++){
 
 let x = i * 400;
 
-barriersArray.push( new Barrier(ctx1, x, canvas1.height-unit *5 - 20, unit * 2, unit, -2, gameSpeed,images.bee, 'bee'))
+barriersArray.push( new Barrier(canvas1, ctx1, x, canvas1.height-unit *5 - 20, unit * 2, unit, -2, gameSpeed,images.bee, 'bee'))
 
 
 }
@@ -142,7 +144,7 @@ for(let i = 0; i < 3; i++){
 
 let x = i * 200;
 
-barriersArray.push( new Barrier(ctx1, x, canvas1.height-unit *6 - 20, unit * 2, unit, 1,gameSpeed,images.bee, 'bee'))
+barriersArray.push( new Barrier(canvas1, ctx1, x, canvas1.height-unit *6 - 20, unit * 2, unit, 1,gameSpeed,images.bee, 'bee'))
 }
 // }
 
@@ -176,6 +178,7 @@ for(let i =0; i < wolvesArray.length; i++){
 
         if(collide(ridingHood, wolvesArray[i])){
 
+                // destroy(wolvesArray[i]);
                 drawSprite(images.collide, 0, 0, 81, 80, ridingHood.x, ridingHood.y, ridingHood.width, ridingHood.height )
                 resetGame();
         }
@@ -187,6 +190,7 @@ for(let i =0; i < barriersArray.length; i++){
 
 if(collide(ridingHood, barriersArray[i])){
 
+                // destroy(barriersArray[i]);
                 drawSprite(images.collide, 0, 0, 81, 80, ridingHood.x, ridingHood.y, ridingHood.width, ridingHood.height )
                 resetGame();
         }

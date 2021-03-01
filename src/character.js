@@ -3,10 +3,10 @@ class Character {
 
 constructor(ctx, img, keys, score, gameSpeed){
 
-this.width = 96;
-this.height = 89;
+this.width = 48;
+this.height = 48;
 this.frameX = 0;
-this.frameY = 3;
+this.frameY = 2;
 this.x = canvas.width/2 - this.width/2;
 this.y = (canvas.height - this.height - 40) + 50;
 this.speed = (Math.random() * 1.5) + 3.5;
@@ -42,16 +42,16 @@ this.ctx.drawImage(this.image, this.frameX*this.width, this.frameY*this.height, 
 
   if(this.keys['ArrowUp'] && this.y >= 100 ){
     this.y -= this.speed;   
-    this.frameY = 1;
+    this.frameY = 3;
     this.moving = true;
     
   }
 
   if(this.keys['ArrowLeft'] && this.x > 0 ){
     this.x -= this.speed;   
-    this.frameY = 3;
-    this.width = 76;
-    this.height =69;
+    this.frameY = 1;
+    this.width = 48;
+    this.height = 48;
     this.moving = true;
 
 
@@ -59,7 +59,7 @@ this.ctx.drawImage(this.image, this.frameX*this.width, this.frameY*this.height, 
 
   if(this.keys['ArrowDown'] && this.y < (canvas.height - this.height)){
     this.y += this.speed;   
-    this.frameY = 2;
+    this.frameY = 0;
     this.moving = true;
 
 
@@ -67,7 +67,7 @@ this.ctx.drawImage(this.image, this.frameX*this.width, this.frameY*this.height, 
 
   if(this.keys['ArrowRight'] && this.x < (canvas.width - this.width) ){
     this.x += this.speed;   
-    this.frameY = 3;
+    this.frameY = 2;
     this.moving = true;
 
 

@@ -1,7 +1,8 @@
 class Barrier {
 
-constructor(ctx, x, y, width, height, speed, gameSpeed,img,type){
+constructor(canvas1,ctx, x, y, width, height, speed, gameSpeed,img,type){
 
+this.canvas1 = canvas1;
 this.x = x;
 this.y = y;
 this.width = width;
@@ -30,11 +31,9 @@ this.ctx.drawImage(this.image,this.frameX*288.5, this.frameY*100, 47,48, this.x,
 
 
 if(this.type === 'wolfl'){
-this.frameY = 5;
-this.frameX =3;
-if (this.frameX > 2) this.frameX = 0;
-else this.frameX++;
-this.ctx.drawImage(this.image,this.frameX * 288, this.frameY* 250, 47,50, this.x + 200, this.y +100, this.width, this.height)
+this.frameX = 2;
+this.frameY = 1;
+this.ctx.drawImage(this.image,this.frameX*288.5, this.frameY*250, 47,50, this.x + 200, this.y +100, this.width, this.height)
 
 }
 
@@ -49,19 +48,24 @@ this.ctx.drawImage(this.image,this.frameX, this.frameY, 71,71, this.x + 200, thi
 
 }
 }
-
+// ctx1.fillStyle = "red";
+// ctx1.fillRect(this.x, this.y, this.width, this.height)
 
 }
 
 update(){
 
+    
+    
     this.x += this.speed * this.gameSpeed;
+    
 
-    // if(this.x > canvas1.width * this.width){
 
-    //         this.x = 0 - this.width;
+    if(this.x > this.canvas1.width * this.width){
 
-    // }
+            this.x = 0 - this.width;
+
+    }
 }
 
 
