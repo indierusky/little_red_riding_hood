@@ -20,20 +20,26 @@ this.image = img;
 draw(){
 
 
-
 if(this.type === 'wolf'){
+    
 this.frameY = 1;
-// this.frameX =3;
+this.frameX =0;
 if (this.frameX > 2) this.frameX = 0;
 else this.frameX++;
 this.ctx.drawImage(this.image,this.frameX*288.5, this.frameY*100, 47,48, this.x, this.y, this.width, this.height)
+// this.ctx.drawImage(this.image,this.frameX*145, this.frameY*65, 47,48, this.x , this.y, this.width, this.height)
+}
 
 
 
 if(this.type === 'wolfl'){
-this.frameX = 2;
+     
+this.frameX = 0;
 this.frameY = 1;
-this.ctx.drawImage(this.image,this.frameX*288.5, this.frameY*250, 47,50, this.x + 200, this.y +100, this.width, this.height)
+if (this.frameX > 2) this.frameX = 0;
+else this.frameX++;
+
+this.ctx.drawImage(this.image,this.frameX*145, this.frameY*65, 47,48, this.x, this.y, this.width, this.height)
 
 }
 
@@ -41,13 +47,15 @@ this.ctx.drawImage(this.image,this.frameX*288.5, this.frameY*250, 47,50, this.x 
 
 
 if(this.type === 'bee'){
+this.frameX = 0;
+this.frameY = 1;    
  
 if (this.frameX > 5) this.frameX = 0;
 else this.frameX++;
 this.ctx.drawImage(this.image,this.frameX, this.frameY, 71,71, this.x + 200, this.y +100, this.width, this.height)
 
 }
-}
+
 // ctx1.fillStyle = "red";
 // ctx1.fillRect(this.x, this.y, this.width, this.height)
 

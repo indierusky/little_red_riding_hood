@@ -244,7 +244,7 @@ window.addEventListener("keydown", function(e){
   keys[e.code] = true;
   if(e.code === 'Enter') startAnimating(20);
   ridingHood.moving = true;
- if(ridingHood.y <= 520  && ridingHood.x >= 1380) scores();
+ if(ridingHood.y <= 600  && ridingHood.x >= 1380) scores();
 
   
 });
