@@ -34,6 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const canvas1 = document.getElementById("canvas");
   canvas1.width = 850;
   canvas1.height = 850;
+
+
+ window.canvas1Height = canvas1.height;
+ window.canvas1Width = canvas1.width;
+ 
   const ctx1 = canvas1.getContext("2d");
 
 ctx1.fillStyle ='black';
@@ -244,7 +249,11 @@ window.addEventListener("keydown", function(e){
   keys[e.code] = true;
   if(e.code === 'Enter') startAnimating(20);
   ridingHood.moving = true;
- if(ridingHood.y <= 600  && ridingHood.x >= 1380) scores();
+
+  const scoringPositionY =  parseFloat(ridingHood.y / window.innnerHeight).toFixed(2);
+  const scoringPositionX = parseFloat(ridingHood.x / window.innerWidth).toFixed(2);
+
+    if( (  (window.innerHeight > ridingHood.y) && (window.innerHeight - ridingHood.y) < 365)  && ((window.innerWidth - ridingHood.x) < 500)  )scores();
 
   
 });
@@ -255,6 +264,9 @@ window.addEventListener("keyup", function(e){
 
 delete keys[e.code];
 ridingHood.moving = false;
+
+if( (  (window.innerHeight > ridingHood.y) && (window.innerHeight - ridingHood.y) < 365)  && ((window.innerWidth - ridingHood.x) < 500)  )scores();
+
 
 
 });
@@ -272,6 +284,8 @@ canvas1.height = window.innerHeight;
 canvas1.width = window.innerWidth;
 
 })
+
+
 
 
 

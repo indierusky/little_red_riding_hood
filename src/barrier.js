@@ -39,7 +39,7 @@ this.frameY = 1;
 if (this.frameX > 2) this.frameX = 0;
 else this.frameX++;
 
-this.ctx.drawImage(this.image,this.frameX*145, this.frameY*65, 47,48, this.x, this.y, this.width, this.height)
+this.ctx.drawImage(this.image,this.frameX*145, this.frameY*65, 47,48, this.x + 800, this.y + 100, this.width, this.height)
 
 }
 
@@ -52,7 +52,7 @@ this.frameY = 1;
  
 if (this.frameX > 5) this.frameX = 0;
 else this.frameX++;
-this.ctx.drawImage(this.image,this.frameX, this.frameY, 71,71, this.x + 200, this.y +100, this.width, this.height)
+this.ctx.drawImage(this.image,this.frameX, this.frameY, 71,71, this.x + 800, this.y +100, this.width, this.height)
 
 }
 

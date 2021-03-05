@@ -72,11 +72,22 @@ this.ctx.drawImage(this.image, this.frameX*this.width, this.frameY*this.height, 
 
 
   }
-   if(this.y < 450  && this.x > 1400){
-     
-      this.score++;
-      this.gameSpeed += .5;
-   }
+  //  if(this.y <= 600  && this.x >= 1350){
+
+    // const scoringPositionY =  parseFloat(ridingHood.y / window.innerHeight).toFixed(2);
+    // const scoringPositionX = parseFloat(ridingHood.x / window.innerWidth).toFixed(2);
+  
+    // console.log(`posx: '${scoringPositionX}`);
+    // console.log(`posy: '${scoringPositionY}`);
+
+  //  if( ( scoringPositionY <= parseFloat(".79").toFixed(2)) && ( scoringPositionX >= parseFloat(".71").toFixed(2)) ) {
+
+
+//   if( ((window.innerHeight - ridingHood.y) < 300)  && ((window.innerWidth - ridingHood.x) < 500)  )
+// {     
+//       this.score++;
+//       this.gameSpeed += .5;
+//    }
 
 
 }
