@@ -265,7 +265,7 @@ window.addEventListener("keyup", function(e){
 delete keys[e.code];
 ridingHood.moving = false;
 
-if( (  (window.innerHeight > ridingHood.y) && (window.innerHeight - ridingHood.y) < 365)  && ((window.innerWidth - ridingHood.x) < 500)  )scores();
+if( (  (canvas1.height > ridingHood.y) && (canvas1.height - ridingHood.y) < 365)  && ((canvas1.width - ridingHood.x) < 500)  )scores();
 
 
 
