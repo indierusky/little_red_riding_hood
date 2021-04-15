@@ -60,7 +60,30 @@ canvas {
   height: 40px;
   text-decoration: none;
   font-size: 36px;
-  color: #bd430f;
+  color:  maroon;
   margin-right: 15px;
   margin-top: 10px;
 }
+
+#htp img {
+ object-fit: cover;
+ object-position: center top;
+  transform: scaleX(-1);
+  height: 50px;
+  width: 108px;
+  cursor: pointer;
+}
+
+
+
+
+#htp p{
+  position: absolute;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: -25px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
