@@ -60,36 +60,30 @@ canvas {
   height: 40px;
   text-decoration: none;
   font-size: 36px;
-  color:  maroon;
+  color: maroon;
   margin-right: 15px;
   margin-top: 10px;
 }
 
-#htp{
-  display:flex;
+#htp {
+  display: flex;
   height: 50px;
   width: 120px;
   cursor: pointer;
 }
 
 #htp img {
-
   transform: scaleX(-1);
   height: 50px;
   width: 120px;
   cursor: pointer;
-  
-  align-self: center;
-  
 
+  align-self: center;
 }
 
-
-
-
-#htp p{
+#htp p {
   position: absolute;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-weight: bold;
   font-size: 10px;
   margin-left: 20px;
@@ -99,22 +93,32 @@ canvas {
   cursor: pointer;
 }
 
-#directions-background{
+#directions-background {
   display: none;
-   position: fixed;
-   top: 0;
-   bottom: 0;
-   right: 0;
-   left: 0;
-   background: rgba(0, 0, 0, 0.55);
-   z-index: 10;
+  position: fixed;
+  object-fit: cover;
+  
+  top: 15%;
+  bottom: 0;
+  right: 0;
+  left: -5%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 10;
 }
 
-.directions{
+.directions {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:300px;
+  width: auto;
   font-size: 35px;
+}
+
+.close-x{
+
+position: absolute;
+margin-right: -70%;
+
+
 }
