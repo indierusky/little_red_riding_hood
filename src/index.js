@@ -59,6 +59,20 @@ ctx1.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH );
 }
 
 
+let htp = document.getElementById("htp");
+let db = document.getElementById("directions-background")
+
+htp.onclick = function () {
+  db.style.display = "block";
+}
+
+window.onclick = function (e) {
+ 
+  if (e.target === db) {
+    db.style.display = "none";
+  }
+}
+
 
 
 const images = {};

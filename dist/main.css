@@ -65,14 +65,14 @@ canvas {
   margin-top: 10px;
 }
 
-.htp{
+#htp{
   display:flex;
   height: 50px;
   width: 120px;
   cursor: pointer;
 }
 
-.htp img {
+#htp img {
 
   transform: scaleX(-1);
   height: 50px;
@@ -87,7 +87,7 @@ canvas {
 
 
 
-.htp p{
+#htp p{
   position: absolute;
   font-family: 'Caveat', cursive;
   font-weight: bold;
@@ -99,3 +99,22 @@ canvas {
   cursor: pointer;
 }
 
+#directions-background{
+  display: none;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.55);
+   z-index: 10;
+}
+
+.directions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:300px;
+  font-size: 35px;
+}
