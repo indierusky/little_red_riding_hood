@@ -2,7 +2,7 @@ import Character from './character';
 import Particle from './particle';
 import Barrier from './barrier';
 import rider from '../public/newlilr.png';
-import back from '../public/grandma3.jpg';
+// import back from '../public/grandma3.jpg';
 import collide from '../public/collide.png';
 import wolf from '../public/wolves.png';
 import bee from '../public/bees.png';
@@ -32,8 +32,8 @@ window.wolvesArray = wolvesArray;
 document.addEventListener('DOMContentLoaded', () => {
     
   const canvas1 = document.getElementById("canvas");
-  canvas1.width = 850;
-  canvas1.height = 850;
+  canvas1.width = 650;
+  canvas1.height = 650;
 
 
  window.canvas1Height = canvas1.height;
@@ -45,9 +45,8 @@ ctx1.fillStyle ='black';
 ctx1.strokeStyle = 'red';
 ctx1.font = '18px Verdana';
 ctx1.strokeText('Use Arrow Keys to move. ', 400, 400);
-ctx1.strokeText('Get basket of food to grandmas house.', 400, 440);
-ctx1.strokeText('Avoid being eaten by wolf.', 400, 480);
-ctx1.strokeText('PRESS ENTER TO START', 400,520);
+ctx1.strokeText('Follow Path to get to grandmas house.', 400, 440);
+ctx1.strokeText('PRESS ENTER TO START', 400,480);
 
 
 
@@ -89,8 +88,8 @@ document.body.append(disp);
 images.player = new Image();
 images.player.src = buildAssetPath(rider);
 
-images.back = new Image();
-images.back.src = buildAssetPath(back);
+// images.back = new Image();
+// images.back.src = buildAssetPath(back);
 
 images.collide = new Image();
 images.collide.src = buildAssetPath(collide);

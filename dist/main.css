@@ -35,10 +35,15 @@ canvas {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 850px;
-  height: 850px;
+  width: 650px;
+  height: 650px;
   transform: translate(-50%, -50%);
   border: 5px solid black;
+  background-image: url("./images/grandma3.jpg");
+  background-size: cover;
+  margin: 0;
+  background-repeat: no-repeat;
+
 }
 
 .navbar {
@@ -60,10 +65,16 @@ canvas {
   height: 40px;
   text-decoration: none;
   font-size: 36px;
-  color: maroon;
+  color: red;
   margin-right: 15px;
   margin-top: 10px;
 }
+
+.links a:hover{
+
+color: #FFFFFF;
+}
+
 
 #htp {
   display: flex;
@@ -115,6 +126,19 @@ canvas {
   font-size: 35px;
 }
 
+#title p {
+  
+
+  align-self: center;
+}
+
+.title-words{
+
+  color: red;
+  font-family: Langar, cursive;
+  font-size: 24px;
+
+}
 .close-x{
 
 position: absolute;
@@ -122,3 +146,10 @@ margin-right: -70%;
 
 
 }
+
+/* body{
+  margin:0;
+  background-image: url(./images/grandma3.jpg);
+  background-size: cover;
+} */
+
