@@ -266,7 +266,7 @@ window.addEventListener("keydown", function(e){
   const scoringPositionY =  parseFloat(ridingHood.y / window.innnerHeight).toFixed(2);
   const scoringPositionX = parseFloat(ridingHood.x / window.innerWidth).toFixed(2);
 
-    if( (  (window.innerHeight > ridingHood.y) && (window.innerHeight - ridingHood.y) < 365)  && ((window.innerWidth - ridingHood.x) < 500)  )scores();
+    if( (  (window.innerHeight > ridingHood.y) && (window.innerHeight - ridingHood.y) < 216)  && (window.innnerWidth > ridingHood.x) ((window.innerWidth - ridingHood.x) < 115)  )scores();
 
   
 });
@@ -278,7 +278,7 @@ window.addEventListener("keyup", function(e){
 delete keys[e.code];
 ridingHood.moving = false;
 
-if( (  (canvas1.height > ridingHood.y) && (canvas1.height - ridingHood.y) < 365)  && ((canvas1.width - ridingHood.x) < 500)  )scores();
+if( (  (canvas1.height > ridingHood.y) && (canvas1.height - ridingHood.y) < 216)  && ((canvas1.width - ridingHood.x) < 115)  )scores();
 
 
 
