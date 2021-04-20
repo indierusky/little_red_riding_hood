@@ -2,7 +2,7 @@ import Character from './character';
 import Particle from './particle';
 import Barrier from './barrier';
 import rider from '../public/newlilr.png';
-// import back from '../public/grandma3.jpg';
+import back from '../public/grandma3.jpg';
 import collide from '../public/collide.png';
 import wolf from '../public/wolves.png';
 import bee from '../public/bees.png';
@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 ctx1.fillStyle ='black';
 ctx1.strokeStyle = 'red';
 ctx1.font = '18px Verdana';
-ctx1.strokeText('Use Arrow Keys to move. ', 400, 400);
-ctx1.strokeText('Follow Path to get to grandmas house.', 400, 440);
-ctx1.strokeText('PRESS ENTER TO START', 400,480);
+ctx1.strokeText('Use Arrow Keys to move. ', 225, 125);
+ctx1.strokeText('Follow Path to get to grandmas house.', 225,165);
+ctx1.strokeText('PRESS ENTER TO START', 225,205);
 
 
 
@@ -88,8 +88,8 @@ document.body.append(disp);
 images.player = new Image();
 images.player.src = buildAssetPath(rider);
 
-// images.back = new Image();
-// images.back.src = buildAssetPath(back);
+images.back = new Image();
+images.back.src = buildAssetPath(back);
 
 images.collide = new Image();
 images.collide.src = buildAssetPath(collide);
@@ -291,12 +291,12 @@ window.ridingHood = ridingHood;
 // window.onload = setInterval(animate, 1000/30);
 
 
-window.addEventListener('resize', function() {
+// window.addEventListener('resize', function() {
 
-canvas1.height = window.innerHeight;
-canvas1.width = window.innerWidth;
+// canvas1.height = window.innerHeight;
+// canvas1.width = window.innerWidth;
 
-})
+// })
 
 
 

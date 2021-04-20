@@ -84,7 +84,7 @@ color: #FFFFFF;
 }
 
 #htp img {
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
   height: 50px;
   width: 120px;
   cursor: pointer;
