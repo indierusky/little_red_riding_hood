@@ -2,7 +2,7 @@ import Character from './character';
 import Particle from './particle';
 import Barrier from './barrier';
 import rider from '../public/newlilr.png';
-import back from '../public/grandma3.jpg';
+// import back from '../public/grandma3.jpg';
 import collide from '../public/collide.png';
 import wolf from '../public/wolves.png';
 import bee from '../public/bees.png';
@@ -88,8 +88,8 @@ document.body.append(disp);
 images.player = new Image();
 images.player.src = buildAssetPath(rider);
 
-images.back = new Image();
-images.back.src = buildAssetPath(back);
+// images.back = new Image();
+// images.back.src = buildAssetPath(back);
 
 images.collide = new Image();
 images.collide.src = buildAssetPath(collide);
@@ -250,7 +250,7 @@ if(((keys['ArrowUp'] || keys['ArrowDown'] || keys['ArrowLeft'] || keys['ArrowRig
 function scores(){
 
 score++;
-gameSpeed += 0.5;
+gameSpeed += .5;
 ridingHood.x = canvas1.width/2 - ridingHood.width/2;
 ridingHood.y = canvas1.height - ridingHood.height-40;
 initBarriers();
@@ -266,7 +266,7 @@ window.addEventListener("keydown", function(e){
   const scoringPositionY =  parseFloat(ridingHood.y / window.innnerHeight).toFixed(2);
   const scoringPositionX = parseFloat(ridingHood.x / window.innerWidth).toFixed(2);
 
-    if( (  (window.innerHeight > ridingHood.y) && (window.innerHeight - ridingHood.y) < 216)  && (window.innnerWidth > ridingHood.x) ((window.innerWidth - ridingHood.x) < 115)  )scores();
+    if( (  (window.innerHeight > ridingHood.y) && (window.innerHeight - ridingHood.y) < 318)  && (window.innnerWidth > ridingHood.x) ((window.innerWidth - ridingHood.x) < 202)  )scores();
 
   
 });
@@ -278,7 +278,7 @@ window.addEventListener("keyup", function(e){
 delete keys[e.code];
 ridingHood.moving = false;
 
-if( (  (canvas1.height > ridingHood.y) && (canvas1.height - ridingHood.y) < 216)  && ((canvas1.width - ridingHood.x) < 115)  )scores();
+if( (  (canvas1.height > ridingHood.y) && (canvas1.height - ridingHood.y) < 318)  && ((canvas1.width - ridingHood.x) < 202)  )scores();
 
 
 
@@ -369,7 +369,7 @@ if (elapsed > fpsInterval){
   then = now - (elapsed % fpsInterval)
   ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
   
-  ctx1.drawImage(images.back, 100, 100, canvas1.width, canvas1.height);
+  // ctx1.drawImage(images.back, 100, 100, canvas1.width, canvas1.height);
     handleParticles();
     ridingHood.drawSprite();
 

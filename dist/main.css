@@ -40,7 +40,7 @@ canvas {
   transform: translate(-50%, -50%);
   border: 5px solid black;
   background-image: url("./images/grandma3.jpg");
-  background-size: cover;
+  background-size: 650px 650px;
   margin: 0;
   background-repeat: no-repeat;
 
